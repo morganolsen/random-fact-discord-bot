@@ -1,5 +1,5 @@
 const fetch = require("node-fetch");
-const webhookEndpoint = "https://discordapp.com/api/webhooks/772648141471481857/DWF1sn_3tvvfy_o82oiPBxDW8a8CEmVuKQEiKngUTz9r09Aji2TLqkPltxyVZ300n0F8";
+const webhookEndpoint = require("./config").webhookEndpoint;
 
 let lastFact = new Date("1970-01-01");
 
@@ -36,3 +36,4 @@ function sendFactAtNoon(){
 }
 
 setInterval(sendFactAtNoon, 1000);
+
